@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Darma Saputra — Mechatronics &amp; Automation Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            DEFAULT: '#08080a',
+                            surface: '#0e0e12',
+                            card: '#121217',
+                            hover: '#191921',
+                            border: 'rgba(255, 255, 255, 0.08)'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'Menlo', 'Courier New', 'monospace'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS (Exact Rivalta Design Architecture) -->
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body class="bg-[#08080a] text-neutral-200 antialiased min-h-screen flex flex-col font-sans selection:bg-white selection:text-black bg-tech-grid">
+
+    <!-- ============================================== -->
+    <!-- 0. FLOATING CAPSULE NAVBAR                     -->
+    <!-- ============================================== -->
+    <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-6 pointer-events-none">
+        <div class="max-w-3xl mx-auto nav-capsule px-5 py-2.5 flex items-center justify-between pointer-events-auto">
+            <!-- Brand / Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-mono font-bold text-xs text-white group-hover:bg-white group-hover:text-black transition-all">
+                    A
+                </div>
+                <div class="flex items-baseline gap-1 text-sm font-medium">
+                    <span class="text-white font-mono tracking-tight font-semibold">akbar darma saputra</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden sm:flex items-center gap-6 text-xs font-mono text-neutral-400">
+                <a href="#about" class="hover:text-white transition-colors">Tentang</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portofolio</a>
+                <a href="#contact" class="hover:text-white transition-colors">Kontak</a>
+            </nav>
+
+            <!-- CTA Pill Button -->
+            <div class="flex items-center gap-3">
+                <a href="assets/docs/CV_Akbar_Darma_Saputra_ATS.pdf" download="CV_Akbar_Darma_Saputra_ATS.pdf" class="btn-pill-white text-xs font-mono py-1.5 px-4 tracking-tight">
+                    <span>Unduh CV</span>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-menu-toggle" class="sm:hidden p-1 text-neutral-400 hover:text-white focus:outline-none" aria-label="Buka Menu Navigasi">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-nav-menu" class="hidden sm:hidden max-w-xs mx-auto mt-2 p-4 rounded-2xl bg-[#0f0f13]/95 backdrop-blur-xl border border-white/10 text-center font-mono text-xs space-y-3 pointer-events-auto shadow-2xl">
+            <a href="#about" class="block py-1 text-neutral-300 hover:text-white">Tentang</a>
+            <a href="#portfolio" class="block py-1 text-neutral-300 hover:text-white">Portofolio</a>
+            <a href="#contact" class="block py-1 text-neutral-300 hover:text-white">Kontak</a>
+            <a href="assets/docs/CV_Akbar_Darma_Saputra_ATS.pdf" download class="block py-2 rounded-full bg-white text-black font-semibold">Unduh CV (ATS)</a>
+        </div>
+    </header>
+
+    <!-- Main Content Stream -->
+    <main class="flex-1 space-y-28 pt-28 pb-20">
+
+        <!-- ============================================== -->
+        <!-- 1. HERO SECTION: PROFILE CARD & HEADLINE       -->
+        <!-- ============================================== -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Tall Hero Portrait Card (Rivalta Exact Framing) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="hero-portrait-card w-full max-w-[370px] aspect-[3/4.2] group">
+                        <!-- Top-Right Floating Bookmark Pill -->
+                        <div class="absolute top-4 right-4 z-20">
+                            <div class="w-8 h-8 rounded-full bg-black/60 border border-white/20 backdrop-blur flex items-center justify-center text-white shadow-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- Akbar's Cinematic Drafting Portrait (Matching Rivalta Aesthetic) -->
+                        <div class="w-full h-full relative overflow-hidden bg-[#0d0d12] flex items-center justify-center">
+                            <img src="assets/images/akbar_hero_cinematic.jpg" alt="Akbar Darma Saputra — Mechatronics & Automation Engineer" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out">
+                            
+                            <!-- Bottom Vignette Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-[15]"></div>
+                        </div>
+
+                        <!-- Bottom Card Overlay Text -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 z-20 space-y-2.5">
+                            <div class="text-[10px] font-mono text-neutral-300 font-semibold tracking-[0.2em] uppercase">
+                                — MEKATRONIKA &amp; OTOMASI INDUSTRI —
+                            </div>
+                            <h3 class="text-2xl font-bold text-white tracking-tight leading-tight">
+                                Akbar Darma <br>Saputra
+                            </h3>
+                            <div class="border-t border-white/15 pt-2.5 flex flex-wrap gap-1.5">
+                                <span class="tag-chip text-[9px] px-2.5 py-0.5">INVENTOR CAD</span>
+                                <span class="tag-chip text-[9px] px-2.5 py-0.5">SCHNEIDER BMS</span>
+                                <span class="tag-chip text-[9px] px-2.5 py-0.5">FIRMWARE C/C++</span>
+                                <span class="tag-chip text-[9px] px-2.5 py-0.5">STANDAR ISO / GD&amp;T</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Editorial Typography & Pitch -->
+                <div class="lg:col-span-7 space-y-6 lg:pl-4">
+                    <!-- Eyebrow Tracking -->
+                    <div class="text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase">
+                        PROFIL PROFESIONAL
+                    </div>
+
+                    <!-- Massive Bold Headline -->
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.08]">
+                        Akbar <br>
+                        Darma Saputra
+                    </h1>
+
+                    <!-- Styled Subtitle with Clean Underline -->
+                    <div class="text-xl sm:text-2xl text-neutral-300 font-medium">
+                        <span class="underline decoration-white/40 underline-offset-8 decoration-2 text-white">Mechatronics &amp; Automation Engineer</span> <span class="text-neutral-400 text-lg">| Robotics · CAD · SCADA</span>
+                    </div>
+
+                    <!-- Professional Value Pitch -->
+                    <p class="text-neutral-400 text-sm leading-relaxed max-w-lg">
+                        Sarjana Terapan (D4) Teknik Mekatronika PENS (IPK 3,41). Menjembatani rekayasa mekanikal, elektrikal, dan antarmuka HMI dengan sistem kendali terdistribusi: dari perancangan Robot Pelatih Kiper skala penuh, commissioning panel Schneider AS-P di Menara BNI PIK2, hingga penyusunan 26 lembar gambar kerja manufaktur ISO untuk Desktop CNC Router.
+                    </p>
+
+                    <!-- Twin Action Pill Buttons -->
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a href="#portfolio" class="btn-pill-white text-xs font-mono">
+                            <span>Lihat Portofolio</span>
+                            <span>↗</span>
+                        </a>
+                        <a href="#contact" class="btn-pill-dark text-xs font-mono">
+                            <svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242L10.758 4.758a3 3 0 114.242 4.242L12 12z"/></svg>
+                            <span>Hubungi Saya</span>
+                        </a>
+                    </div>
+
+                    <!-- Subtle Scroll Indicator -->
+                    <div class="pt-6 text-neutral-500 font-mono text-xs flex items-center gap-2">
+                        <span class="animate-bounce">↓</span>
+                        <span>gulir ke bawah</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 2. SECTION 01: TENTANG SAYA & METRIK REKAYASA  -->
+        <!-- ============================================== -->
+        <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Eyebrow -->
+            <div class="mb-5 font-mono text-xs text-neutral-400 tracking-[0.2em] uppercase">
+                — 01 — TENTANG SAYA
+            </div>
+
+            <!-- Bento Container with Grid Background -->
+            <div class="obsidian-card p-8 sm:p-12 relative overflow-hidden bg-tech-grid">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Left Bento: Bio & Focus Chips -->
+                    <div class="lg:col-span-8 space-y-5">
+                        <div class="text-[11px] font-mono uppercase tracking-widest text-neutral-400">
+                            BIOGRAFI SINGKAT
+                        </div>
+                        
+                        <p class="text-neutral-200 text-sm sm:text-base leading-relaxed">
+                            Lulusan Sarjana Terapan (D4) Teknik Mekatronika dari <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong> dengan kompetensi terintegrasi di bidang otomasi industri, Building Management System (BMS), sistem embedded (dual-ESP32, firmware C/C++), desain mekanikal parametrik (Autodesk Inventor), serta perancangan PCB kustom (KiCad/Eagle).
+                        </p>
+
+                        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed">
+                            Memiliki pengalaman langsung dalam proses commissioning panel Schneider Electric AS-P di Menara BNI PIK2, serta rekam jejak kepemimpinan riset sebagai <strong>Ketua Departemen RTSM HIMA MEKA PENS</strong> (2024–2025). Kesiapan kerja di lapangan didukung pemahaman standar <strong>ISO (9001, 14001, 45001, 31000)</strong> dan prosedur keselamatan kerja <strong>K3 LOTO</strong>.
+                        </p>
+
+                        <!-- Focus Badges -->
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="tag-chip">— DESAIN MEKANIKAL &amp; GD&amp;T</span>
+                            <span class="tag-chip">— HARDWARE EMBEDDED &amp; PCB</span>
+                            <span class="tag-chip">— OTOMASI BMS &amp; SCADA</span>
+                            <span class="tag-chip">— SISTEM ROBOTIKA</span>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="pt-2">
+                            <a href="#portfolio" class="btn-pill-white text-xs font-mono py-2 px-5">
+                                <span>Lihat Karya Rekayasa</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Bento: Hanging Tethered Photo (Rivalta 3D Swivel) -->
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="tether-container">
+                            <div class="tether-pin"></div>
+                            <div class="tether-line"></div>
+                            <div class="tether-clamp"></div>
+                            <div id="hanging-card" class="hanging-card w-48 sm:w-52 rounded-2xl overflow-hidden border border-white/20 bg-black shadow-2xl mt-1 aspect-[3/4] relative cursor-pointer">
+                                <img src="assets/images/akbar_formal.jpg" alt="Foto Formal Akbar Darma Saputra, S.Tr.T." class="w-full h-full object-cover object-top filter grayscale contrast-115 hover:grayscale-0 transition-all duration-500">
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/50 to-transparent p-2.5 text-center text-[10px] font-mono text-neutral-300">
+                                    Akbar Darma Saputra, S.Tr.T.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Metric Strip (4 Verified Data Points in 1 Row) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 border-t border-white/10 pt-8 mt-10 text-left">
+                    <!-- Metric 1: IPK -->
+                    <div class="metric-block py-2 md:py-0 md:px-6">
+                        <span class="text-3xl sm:text-4xl font-mono font-bold text-white tracking-tight">3.41</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">IPK D4 MEKATRONIKA PENS</span>
+                    </div>
+
+                    <!-- Metric 2: BMS Menara BNI -->
+                    <div class="metric-block py-2 md:py-0 md:px-6">
+                        <span class="text-3xl sm:text-4xl font-mono font-bold text-white tracking-tight">6 <span class="text-base sm:text-lg font-normal text-neutral-400">Bulan</span></span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">COMMISSIONING BMS MENARA BANK BNI</span>
+                    </div>
+
+                    <!-- Metric 3: Blueprints ISO (CAD) -->
+                    <div class="metric-block py-2 md:py-0 md:px-6">
+                        <span class="text-3xl sm:text-4xl font-mono font-bold text-white tracking-tight">26</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">LEMBAR GAMBAR KERJA ISO (CAD)</span>
+                    </div>
+
+                    <!-- Metric 4: Sertifikasi ISO, K3 & LOTO -->
+                    <div class="metric-block py-2 md:py-0 md:px-6">
+                        <span class="text-3xl sm:text-4xl font-mono font-bold text-white tracking-tight">6</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">SERTIFIKASI ISO, K3 &amp; LOTO</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 3. SECTION 02: PORTOFOLIO PROJEK               -->
+        <!-- (Horizontal Accordion Card Deck ala Rivalta)   -->
+        <!-- ============================================== -->
+        <section id="portfolio" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center space-y-3 mb-8">
+                <div class="font-mono text-xs text-neutral-400 tracking-[0.2em] uppercase">
+                    — 02 — PORTOFOLIO PROJEK
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                    Galeri Karya Rekayasa
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-400 max-w-xl mx-auto">
+                    Dokumentasi teknis tiga proyek terintegrasi: sistem robotika skala penuh, gambar kerja manufaktur ISO, komisioning BMS gedung bertingkat, serta sertifikasi kepatuhan industri.
+                </p>
+
+                <!-- Filter Tabs Capsule Switcher (Projects/CAD, ISO & Leadership, Tech Stack) -->
+                <div class="pt-3">
+                    <div class="tab-capsule">
+                        <button class="tab-pill-btn active" data-tab="tab-drawings">Projek Utama &amp; CAD</button>
+                        <button class="tab-pill-btn" data-tab="tab-achievements">Sertifikasi ISO &amp; Kepemimpinan</button>
+                        <button class="tab-pill-btn" data-tab="tab-tools">Tech Stack &amp; Tooling</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 1: DRAWINGS & PROJECTS (Horizontal Accordion Deck) -->
+            <div id="tab-drawings" class="tab-content-panel block">
+                <div class="obsidian-card p-4 sm:p-6 bg-[#0a0a0d] border-white/10">
+                    
+                    <!-- THE HORIZONTAL ACCORDION DECK -->
+                    <div class="accordion-deck" id="portfolio-accordion">
+
+                        <!-- CARD 1: BNI TOWER PIK2 BMS DIGITAL TWIN (Expanded by default) -->
+                        <div class="accordion-card expanded" data-card="0">
+                            <!-- Background Technical Visual Slideshow (Real Commissioning Team & SCADA Digital Twin) -->
+                            <div class="card-bg-slideshow" id="bni-slideshow">
+                                <img src="assets/images/bni_commissioning_team.jpg" alt="Tim Commissioning Lapangan Panel BMS Menara BNI PIK2" class="card-bg-slide active" style="object-position: center 25%;">
+                                <img src="assets/images/bni_digital_twin_preview.png" alt="Digital Twin SCADA Menara BNI PIK2" class="card-bg-slide">
+                            </div>
+                            <div class="absolute inset-0 bg-black/55 z-0 pointer-events-none"></div>
+
+                            <!-- Collapsed Spine -->
+                            <div class="collapsed-spine">
+                                <span class="font-mono text-[10px] text-neutral-500">01</span>
+                                <span class="collapsed-spine-text">COMMISSIONING BMS MENARA BNI</span>
+                                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                            </div>
+
+                            <!-- Expanded Content Overlay -->
+                            <div class="expanded-content">
+                                <!-- Top Discipline Tag -->
+                                <div class="flex items-center justify-between">
+                                    <span class="tag-chip bg-black/80 backdrop-blur border-white/20 text-[10px]">
+                                        OTOMASI GEDUNG &amp; SCADA
+                                    </span>
+                                    <span class="tag-chip bg-blue-500/20 text-blue-400 border-blue-500/40 text-[10px]">
+                                        SCHNEIDER AS-P · PIK2
+                                    </span>
+                                </div>
+
+                                <!-- Bottom Card Info & Actions -->
+                                <div class="space-y-3 bg-gradient-to-t from-black via-black/85 to-transparent -mx-7 -mb-7 p-7 pt-12 rounded-b-2xl">
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                            Commissioning BMS Menara BNI PIK2
+                                        </h3>
+                                        <p class="text-xs sm:text-sm text-neutral-300 mt-1 max-w-2xl leading-relaxed">
+                                            Hasil komisioning sistem otomasi gedung komersial Menara Bank BNI PIK2 berbasis server Schneider Electric AS-P dan platform EcoStruxure Building Operation (EBO). Meliputi telemetri gardu hubung multi-panel daya listrik 3-fasa (SDP, PAC, PL) serta kendali loop tertutup HVAC AHU inverter Altivar VSD (0–50 Hz) yang diwujudkan dalam simulasi Web SCADA interaktif 60 FPS.
+                                        </p>
+                                    </div>
+
+                                    <!-- Quick Technical Chips -->
+                                    <div class="flex flex-wrap gap-1.5 pt-1">
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Schneider AS-P Server</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5 bg-blue-500/15 text-blue-300 border-blue-500/30">EcoStruxure EBO &amp; BACnet</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Inverter HVAC Altivar VSD</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Panel Daya 3-Fasa (SDP/PAC/PL)</span>
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                                        <a href="https://akbardarma.github.io/bni-ibms-akbar/" target="_blank" class="btn-pill-white text-xs font-mono py-1.5 px-4">
+                                            <span>Buka Demo SCADA</span>
+                                            <span>↗</span>
+                                        </a>
+                                        <a href="https://github.com/Akbardarma/bni-ibms-akbar" target="_blank" rel="noopener noreferrer" class="btn-pill-dark text-xs font-mono py-1.5 px-4">
+                                            <span>Repositori GitHub</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: DESKTOP CNC ROUTER & 26 BLUEPRINTS (Exact Rivalta Drawing Style) -->
+                        <div class="accordion-card" data-card="1">
+                            <!-- Background Technical Visual Slideshow (Auto Cross-Fade CAD Renders & Exploded Drawings) -->
+                            <div class="card-bg-slideshow" id="cnc-slideshow">
+                                <img src="assets/images/cnc_assembly_preview.png" alt="Render Assembly 3D CNC Router" class="card-bg-slide active">
+                                <img src="assets/images/cnc_exploded_carriage.png" alt="Render Exploded Carriage Spindle &amp; Stepper" class="card-bg-slide">
+                                <img src="assets/images/cnc_exploded_base.png" alt="Explode Baloon Frame &amp; Base CNC Router" class="card-bg-slide">
+                            </div>
+                            <div class="absolute inset-0 bg-black/55 z-0 pointer-events-none"></div>
+
+                            <!-- Collapsed Spine -->
+                            <div class="collapsed-spine">
+                                <span class="font-mono text-[10px] text-neutral-500">02</span>
+                                <span class="collapsed-spine-text">DESKTOP CNC ROUTER</span>
+                                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                            </div>
+
+                            <!-- Expanded Content Overlay -->
+                            <div class="expanded-content">
+                                <!-- Top Discipline Tag -->
+                                <div class="flex items-center justify-between">
+                                    <span class="tag-chip bg-black/80 backdrop-blur border-white/20 text-[10px]">
+                                        DESAIN MEKANIKAL &amp; CAD
+                                    </span>
+                                    <span class="tag-chip bg-amber-500/20 text-amber-400 border-amber-500/40 text-[10px]">
+                                        STANDAR ISO
+                                    </span>
+                                </div>
+
+                                <!-- Bottom Card Info & Actions -->
+                                <div class="space-y-3 bg-gradient-to-t from-black via-black/85 to-transparent -mx-7 -mb-7 p-7 pt-12 rounded-b-2xl">
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                            Desktop CNC Router 3-Axis
+                                        </h3>
+                                        <p class="text-xs sm:text-sm text-neutral-300 mt-1 max-w-2xl leading-relaxed">
+                                            Perancangan mekanikal parametrik mesin CNC router 3-axis berbasis Autodesk Inventor (assembly 438 komponen, 61 part unik). Dilengkapi set lengkap 26 lembar gambar kerja manufaktur berstandar ISO (GD&amp;T, toleransi suaian presisi H7, SOP perakitan mekanis), Bill of Materials (BOM) 41 item siap fabrikasi, serta model interaktif 3D CAD untuk inspeksi perakitan komponen.
+                                        </p>
+                                    </div>
+
+                                    <!-- Quick Technical Chips -->
+                                    <div class="flex flex-wrap gap-1.5 pt-1">
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Autodesk Inventor CAD</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5 bg-amber-500/15 text-amber-300 border-amber-500/30">26 Lembar Drawing ISO</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Toleransi H7 &amp; GD&amp;T</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">BOM 41 Item &amp; Model 3D</span>
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                                        <a href="https://akbardarma.github.io/cnc-router/" target="_blank" class="btn-pill-white text-xs font-mono py-1.5 px-4">
+                                            <span>Inspeksi Model 3D</span>
+                                            <span>↗</span>
+                                        </a>
+                                        <a href="https://github.com/Akbardarma/cnc-router" target="_blank" rel="noopener noreferrer" class="btn-pill-dark text-xs font-mono py-1.5 px-4">
+                                            <span>Repositori GitHub</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: ROBOT PELATIH KIPER -->
+                        <div class="accordion-card" data-card="2">
+                            <!-- Background Technical Visual (Real Physical Robot) -->
+                            <img src="assets/images/robot_fisik_depan.jpg" alt="Purwarupa Fisik Robot Pelatih Kiper Skala Penuh" class="card-bg-img" style="object-position: center 30%;">
+                            <div class="absolute inset-0 bg-black/55 z-0"></div>
+
+                            <!-- Collapsed Spine -->
+                            <div class="collapsed-spine">
+                                <span class="font-mono text-[10px] text-neutral-500">03</span>
+                                <span class="collapsed-spine-text">ROBOT PELATIH KIPER</span>
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            </div>
+
+                            <!-- Expanded Content Overlay -->
+                            <div class="expanded-content">
+                                <!-- Top Discipline Tag -->
+                                <div class="flex items-center justify-between">
+                                    <span class="tag-chip bg-black/80 backdrop-blur border-white/20 text-[10px]">
+                                        SISTEM ROBOTIKA
+                                    </span>
+                                    <span class="tag-chip bg-emerald-500/20 text-emerald-400 border-emerald-500/40 text-[10px]">
+                                        TUGAS AKHIR PENS
+                                    </span>
+                                </div>
+
+                                <!-- Bottom Card Info & Actions -->
+                                <div class="space-y-3 bg-gradient-to-t from-black via-black/85 to-transparent -mx-7 -mb-7 p-7 pt-12 rounded-b-2xl">
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                            Robot Pelatih Kiper
+                                        </h3>
+                                        <p class="text-xs sm:text-sm text-neutral-300 mt-1 max-w-2xl leading-relaxed">
+                                            Robot pelatih kiper end to end dengan pelontar tri-spinner motor DC 895 (3.400 RPM, akurasi 83,3% efek Magnus), mobile swerve drive, kendali terdistribusi dual-ESP32 via bus UART 115.200 bps, serta <strong>Custom Controller PCB (KiCad)</strong> dengan proteksi daya MCB dan HMI telemetri Flutter.
+                                        </p>
+                                    </div>
+
+                                    <!-- Quick Technical Chips -->
+                                    <div class="flex flex-wrap gap-1.5 pt-1">
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Tri-Spinner 3.400 RPM</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Swerve Drive Locomotion</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5 bg-emerald-500/15 text-emerald-300 border-emerald-500/30">Custom KiCad Controller PCB</span>
+                                        <span class="tag-chip text-[9px] px-2.5 py-0.5">Dual-ESP32 UART Bus</span>
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                                        <a href="https://akbardarma.github.io/robot-pelatih-kiper/" target="_blank" class="btn-pill-white text-xs font-mono py-1.5 px-4">
+                                            <span>Buka Web Showcase</span>
+                                            <span>↗</span>
+                                        </a>
+                                        <a href="https://github.com/Akbardarma/robot-pelatih-kiper" target="_blank" rel="noopener noreferrer" class="btn-pill-dark text-xs font-mono py-1.5 px-4">
+                                            <span>Repositori GitHub</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 2: ACHIEVEMENTS & ISO (Hidden by default) -->
+            <div id="tab-achievements" class="tab-content-panel hidden">
+                <div class="obsidian-card p-6 sm:p-8 space-y-6 bg-[#0a0a0d] border-white/10">
+                    
+                    <!-- Section Header inside Tab -->
+                    <div class="border-b border-white/10 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">SERTIFIKASI ISO &amp; KEPEMIMPINAN</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                                Pelatihan Standar Industri, K3 &amp; Pengalaman Organisasi
+                            </h3>
+                        </div>
+                        <span class="text-[11px] font-mono text-neutral-400">
+                            6 Kredensial Resmi Terverifikasi
+                        </span>
+                    </div>
+
+                    <!-- EQUAL 6-CARD GRID (HONEST & PROFESSIONAL) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        
+                        <!-- Kartu 1: HIMA MEKA PENS -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">ORGANISASI MAHASISWA</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">SK No. 054/B/S</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-emerald-300 transition-colors">Kepala Departemen RTSM</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">Himpunan Mahasiswa Mekatronika PENS · 2024–2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Bertanggung jawab atas manajemen divisi riset: mengarahkan perancangan robotika &amp; otomasi mahasiswa, mengorganisasi pelatihan peningkatan kompetensi rekayasa, dan merealisasikan program pengabdian masyarakat.
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Kepala Departemen RTSM',
+                                    issuer: 'Himpunan Mahasiswa Mekatronika PENS · 2024–2025',
+                                    regNo: 'SK No. 054/B/S/HIMAMEKA/XI/2025',
+                                    desc: 'Bertanggung jawab atas manajemen divisi riset: mengarahkan perancangan robotika &amp; otomasi mahasiswa, mengorganisasi pelatihan peningkatan kompetensi rekayasa, dan merealisasikan program pengabdian masyarakat. Disahkan resmi oleh Koordinator Program Studi D4 Teknik Mekatronika Politeknik Elektronika Negeri Surabaya.',
+                                    imgSrc: 'assets/images/certs/cert_rtsm_pens.jpg',
+                                    tag: 'ORGANISASI MAHASISWA'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-neutral-200 hover:text-white flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kartu 2: ISO 9001 (Mutu) -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-blue-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-blue-400 uppercase tracking-wider font-semibold">SISTEM MANAJEMEN MUTU</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">Reg. 3143/64/QMS.A</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-blue-300 transition-colors">Pelatihan ISO 9001:2015 (QMS)</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Pemahaman dasar klausul ISO 9001:2015 mengenai tata kelola penjaminan mutu rekayasa, pengendalian dokumen teknik, standardisasi gambar manufaktur, dan siklus perbaikan berkelanjutan (PDCA).
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Pelatihan ISO 9001:2015 (QMS)',
+                                    issuer: 'PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025',
+                                    regNo: 'Reg.No. 3143/64/QMS.A.PJK3.IDEA/2025',
+                                    desc: 'Pemahaman dasar klausul ISO 9001:2015 mengenai tata kelola penjaminan mutu rekayasa, pengendalian dokumen teknik, standardisasi gambar manufaktur, dan siklus perbaikan berkelanjutan (PDCA).',
+                                    imgSrc: 'assets/images/certs/cert_iso_9001.jpg',
+                                    tag: 'SISTEM MANAJEMEN MUTU'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-neutral-200 hover:text-white flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kartu 3: K3 Lock Out Tag Out (LOTO) -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-amber-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-wider font-semibold">KESELAMATAN KERJA (K3)</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">Reg. 3143/64/QMS.E</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-amber-300 transition-colors">Pelatihan K3: Lock Out Tag Out (LOTO)</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Pemahaman prosedur isolasi sumber energi berbahaya (Zero Energy State) pada sistem kelistrikan 3-fasa, mekanik, dan pneumatik sebelum pelaksanaan instalasi, pemeliharaan mesin, atau panel kontrol.
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Pelatihan K3: Lock Out Tag Out (LOTO)',
+                                    issuer: 'PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025',
+                                    regNo: 'Reg.No. 3143/64/QMS.E.PJK3.IDEA/2025',
+                                    desc: 'Pemahaman prosedur isolasi sumber energi berbahaya (Zero Energy State) pada sistem kelistrikan 3-fasa, mekanik, dan pneumatik sebelum pelaksanaan instalasi, pemeliharaan mesin, atau panel kontrol.',
+                                    imgSrc: 'assets/images/certs/cert_loto.jpg',
+                                    tag: 'KESELAMATAN KERJA (K3)'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kartu 4: ISO 45001 (K3 Industri) -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">KESELAMATAN KERJA (K3)</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">Reg. 3143/64/QMS.C</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-emerald-300 transition-colors">Pelatihan ISO 45001:2018 (SMK3)</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Pemahaman kerangka kerja sistem manajemen K3 industri, pengenalan identifikasi bahaya dan penilaian risiko (HIRADC), serta prosedur pencegahan kecelakaan kerja di lingkungan operasional.
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Pelatihan ISO 45001:2018 (SMK3)',
+                                    issuer: 'PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025',
+                                    regNo: 'Reg.No. 3143/64/QMS.C.PJK3.IDEA/2025',
+                                    desc: 'Pemahaman kerangka kerja sistem manajemen K3 industri, pengenalan identifikasi bahaya dan penilaian risiko (HIRADC), serta prosedur pencegahan kecelakaan kerja di lingkungan operasional.',
+                                    imgSrc: 'assets/images/certs/cert_iso_45001.jpg',
+                                    tag: 'KESELAMATAN KERJA (K3)'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-neutral-200 hover:text-white flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kartu 5: ISO 14001 (Lingkungan) -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">MANAJEMEN LINGKUNGAN</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">Reg. 3143/64/QMS.B</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-emerald-300 transition-colors">Pelatihan ISO 14001:2015 (EMS)</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Pemahaman dasar sistem manajemen lingkungan fasilitas industri, identifikasi aspek dan dampak lingkungan operasional, serta prinsip efisiensi konsumsi energi fasilitas.
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Pelatihan ISO 14001:2015 (EMS)',
+                                    issuer: 'PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025',
+                                    regNo: 'Reg.No. 3143/64/QMS.B.PJK3.IDEA/2025',
+                                    desc: 'Pemahaman dasar sistem manajemen lingkungan fasilitas industri, identifikasi aspek dan dampak lingkungan operasional, serta prinsip efisiensi konsumsi energi fasilitas.',
+                                    imgSrc: 'assets/images/certs/cert_iso_14001.jpg',
+                                    tag: 'MANAJEMEN LINGKUNGAN'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-neutral-200 hover:text-white flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kartu 6: ISO 31000 (Manajemen Risiko) -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-purple-500/40 transition-all flex flex-col justify-between space-y-4 group">
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-mono text-purple-400 uppercase tracking-wider font-semibold">MANAJEMEN RISIKO</span>
+                                    <span class="text-[9px] font-mono text-neutral-500">Reg. 3143/64/QMS.D</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-purple-300 transition-colors">Pelatihan ISO 31000:2018 (Risk)</h4>
+                                    <span class="text-[11px] font-mono text-neutral-400 block mt-0.5">PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025</span>
+                                </div>
+                                <p class="text-xs text-neutral-300 leading-relaxed pt-0.5">
+                                    Pemahaman prinsip dan pedoman manajemen risiko: identifikasi potensi risiko teknis/operasional, analisis kemungkinan dan dampak kegagalan sistem, serta penentuan langkah mitigasi.
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-white/5 flex items-center justify-end">
+                                <button onclick="window.openCertModal({
+                                    title: 'Pelatihan ISO 31000:2018 (Risk)',
+                                    issuer: 'PJK3 PT Inspirasi Duta Energi Abadi · Agu 2025',
+                                    regNo: 'Reg.No. 3143/64/QMS.D.PJK3.IDEA/2025',
+                                    desc: 'Pemahaman prinsip dan pedoman manajemen risiko: identifikasi potensi risiko teknis/operasional, analisis kemungkinan dan dampak kegagalan sistem, serta penentuan langkah mitigasi.',
+                                    imgSrc: 'assets/images/certs/cert_iso_31000.jpg',
+                                    tag: 'MANAJEMEN RISIKO'
+                                })" class="btn-pill-dark text-xs font-mono py-1.5 px-3 border-white/15 hover:border-white/30 text-neutral-200 hover:text-white flex items-center gap-1.5">
+                                    <span>Pratinjau Sertifikat</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 3: TOOLS (Hidden by default) -->
+            <div id="tab-tools" class="tab-content-panel hidden">
+                <div class="obsidian-card p-6 sm:p-8 space-y-6 bg-[#0a0a0d] border-white/10">
+                    
+                    <!-- Section Header inside Tab -->
+                    <div class="border-b border-white/10 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">KOMPETENSI TEKNIK &amp; TOOLING MEKATRONIKA</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                                Tech Stack &amp; Perangkat Rekayasa Industri
+                            </h3>
+                        </div>
+                        <span class="text-[11px] font-mono text-neutral-400">
+                            4 Pilar Disiplin Mekatronika Terintegrasi
+                        </span>
+                    </div>
+
+                    <!-- 4-PILLAR ENGINEERING TECH STACK GRID -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                        <!-- PILAR 1: OTOMASI INDUSTRI & SCADA / BMS -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-blue-500/40 transition-all space-y-4 group">
+                            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center text-xs font-bold font-mono">01</span>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-blue-300 transition-colors">Otomasi Industri &amp; BMS / SCADA</h4>
+                                        <span class="text-[10px] font-mono text-neutral-400">Schneider AS-P, PLC &amp; Komisioning Lapangan</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">INDUSTRI</span>
+                            </div>
+
+                            <div class="space-y-2.5 text-xs text-neutral-300">
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Schneider EcoStruxure Building Operation (EBO)</span>
+                                    <span class="text-neutral-400 text-[11px] block">Graphic Editor EBO, konfigurasi titik I/O telemetri, alarm interlock, dan pemantauan efisiensi energi.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Automation Server Premium (AS-P) &amp; Protokol</span>
+                                    <span class="text-neutral-400 text-[11px] block">Integrasi server otomasi gedung, komunikasi jaringan BACnet MS/TP, dan protokol Modbus RTU/TCP.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Machine Expert Basic &amp; Vijeo Designer</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pemrograman PLC Schneider (Ladder Diagram &amp; FBD) serta perancangan antarmuka HMI panel industri.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Wiring Panel Kelistrikan &amp; Instrumentasi Lapangan</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pengkabelan panel daya 3-fasa (SDP, PAC, PL), CT, Power Meter, sensor diferensial HVAC, dan flow switch.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PILAR 2: PERANCANGAN MEKANIKAL & CAD / MANUFAKTUR -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-amber-500/40 transition-all space-y-4 group">
+                            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center text-xs font-bold font-mono">02</span>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-amber-300 transition-colors">Desain Mekanikal CAD &amp; Manufaktur</h4>
+                                        <span class="text-[10px] font-mono text-neutral-400">Autodesk Inventor, Standar ISO &amp; Mesin CNC</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">MEKANIK</span>
+                            </div>
+
+                            <div class="space-y-2.5 text-xs text-neutral-300">
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Autodesk Inventor Professional</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pemodelan parametrik 3D part &amp; assembly kompleks multi-komponen (438 komponen, 61 part unik).</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">26 Lembar Gambar Kerja Manufaktur ISO</span>
+                                    <span class="text-neutral-400 text-[11px] block">Proyeksi ortogonal, penampang potong, toleransi suaian presisi H7, GD&amp;T, dan SOP perakitan mekanis.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Bill of Materials (BOM) Fabrikasi</span>
+                                    <span class="text-neutral-400 text-[11px] block">Penyusunan BOM 41 item material struktural, suku cadang standar (lead screw, bearing, motor), dan spesifikasi baut.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Pemrograman G-Code &amp; Operasional Mesin CNC</span>
+                                    <span class="text-neutral-400 text-[11px] block">Generasi lintasan pahat (toolpath), pengaturan koordinat titik nol benda kerja, dan pemesinan CNC router.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PILAR 3: EMBEDDED SYSTEMS, FIRMWARE & KONTROL -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-emerald-500/40 transition-all space-y-4 group">
+                            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xs font-bold font-mono">03</span>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-emerald-300 transition-colors">Embedded Systems &amp; Kendali Otomatis</h4>
+                                        <span class="text-[10px] font-mono text-neutral-400">Dual-ESP32, Bahasa C/C++ &amp; Closed-Loop PID</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">FIRMWARE</span>
+                            </div>
+
+                            <div class="space-y-2.5 text-xs text-neutral-300">
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Bahasa C / C++ (Embedded Firmware)</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pemrograman arsitektur firmware mikrokontroler menggunakan PlatformIO dan Arduino IDE.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Mikrokontroler: ESP32, STM32 &amp; Arduino</span>
+                                    <span class="text-neutral-400 text-[11px] block">Arsitektur terdistribusi dual-ESP32 (Master-Shooter), STM32 ARM Cortex-M, dan mikrokontroler ATmega.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Kendali Kecepatan Loop Tertutup (Closed-Loop PID)</span>
+                                    <span class="text-neutral-400 text-[11px] block">Interupsi enkoder Hall effect, modulasi lebar pulsa (PWM 20 kHz), dan aktuasi motor BTS7960 43A MOSFET.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Sensor Fusion &amp; Komunikasi Serial</span>
+                                    <span class="text-neutral-400 text-[11px] block">Orientasi IMU MPU6050 untuk Swerve Drive, komunikasi bus UART full-duplex 115.200 bps, I2C, dan SPI.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PILAR 4: DESAIN HARDWARE PCB, INSTRUMENTASI & HMI -->
+                        <div class="p-5 rounded-2xl bg-black/60 border border-white/10 hover:border-purple-500/40 transition-all space-y-4 group">
+                            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 border border-purple-500/30 flex items-center justify-center text-xs font-bold font-mono">04</span>
+                                    <div>
+                                        <h4 class="font-bold text-white text-sm sm:text-base group-hover:text-purple-300 transition-colors">Desain PCB, Instrumentasi &amp; HMI</h4>
+                                        <span class="text-[10px] font-mono text-neutral-400">KiCad EDA, Alat Uji &amp; Antarmuka Flutter</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">HARDWARE</span>
+                            </div>
+
+                            <div class="space-y-2.5 text-xs text-neutral-300">
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">KiCad EDA &amp; Autodesk Eagle</span>
+                                    <span class="text-neutral-400 text-[11px] block">Perancangan skematik dan layout papan sirkuit cetak (PCB) kustom 2-layer FR4 terisolasi optocoupler.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Perakitan Solder Komponen SMD &amp; THT</span>
+                                    <span class="text-neutral-400 text-[11px] block">Perakitan manual PCB controller, integrasi regulator buck step-down, proteksi tegangan LDO, dan MCB DC 24V.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Alat Ukur: Osiloskop Digital &amp; Multimeter</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pengujian sinyal clock/PWM, verifikasi integritas sinyal sensor, pembacaan derau induktif, dan troubleshooting sirkuit.</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                                    <span class="font-mono text-white font-semibold block">Flutter/Dart (HMI Robot) &amp; Python</span>
+                                    <span class="text-neutral-400 text-[11px] block">Pengembangan aplikasi HMI nirkabel untuk kontrol/telemetri robot serta skrip Python pengolahan data sensor CSV.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 4. SECTION 03: KONTAK & KERJASAMA              -->
+        <!-- (Rivalta Exact Headline & Capsule Box)         -->
+        <!-- ============================================== -->
+        <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Eyebrow -->
+            <div class="mb-5 font-mono text-xs text-neutral-400 tracking-[0.2em] uppercase">
+                — 03 — KONTAK &amp; KERJASAMA
+            </div>
+
+            <!-- Contact Box -->
+            <div class="obsidian-card p-8 sm:p-14 relative overflow-hidden bg-tech-grid">
+                <div class="max-w-2xl space-y-6">
+                    <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+                        Mencari engineer mekatronika, otomasi industri, atau desain CAD? <br>
+                        Mari berdiskusi.
+                    </h2>
+
+                    <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+                        Terbuka untuk posisi rekayasa penuh waktu (full-time), proyek integrasi &amp; commissioning otomasi industri (PLC, SCADA, BMS), perancangan mekanikal CAD siap fabrikasi, serta pengembangan sistem robotika. Silakan hubungi saya melalui email, WhatsApp, atau unduh CV lengkap saya di bawah ini.
+                    </p>
+
+                    <!-- Interactive Email Copy Pill Box (Rivalta Exact Component) -->
+                    <div class="pt-2">
+                        <div onclick="window.copyToClipboard('akbardarma11@gmail.com', 'Alamat Email')" class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-black/80 border border-white/15 hover:border-white/40 cursor-pointer transition-all group">
+                            <svg class="w-4 h-4 text-neutral-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <span class="text-xs sm:text-sm font-mono text-neutral-200 group-hover:text-white">akbardarma11@gmail.com</span>
+                            <span class="text-xs font-mono text-neutral-500 group-hover:text-neutral-300">📋 (Salin)</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary Action Buttons (Download CV & WhatsApp) -->
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a href="assets/docs/CV_Akbar_Darma_Saputra_ATS.pdf" download="CV_Akbar_Darma_Saputra_ATS.pdf" class="btn-pill-white text-xs font-mono py-2.5 px-5">
+                            <span>Unduh CV Lengkap (PDF)</span>
+                            <span>⤓</span>
+                        </a>
+                        <a href="https://wa.me/6285117606711" target="_blank" rel="noopener noreferrer" class="btn-pill-dark text-xs font-mono py-2.5 px-5 border-white/20">
+                            <span>Hubungi via WhatsApp</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                    <!-- Secondary Channels -->
+                    <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-neutral-400">
+                        <a href="https://linkedin.com/in/akbardarmasaputra" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn ↗</a>
+                        <span>·</span>
+                        <a href="https://github.com/Akbardarma" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub ↗</a>
+                        <span>·</span>
+                        <span class="text-neutral-500">Domisili: Lamongan, Jawa Timur</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================== -->
+    <!-- 5. FOOTER (Rivalta Exact Layout)               -->
+    <!-- ============================================== -->
+    <footer class="border-t border-white/10 bg-[#060608] py-8 text-neutral-500 font-mono text-xs">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                &copy; 2026 Akbar Darma Saputra. Dikembangkan dengan standar rekayasa web modern.
+            </div>
+            <div class="text-neutral-500 text-[11px]">
+                Dirancang &amp; direkayasa di Lamongan, Jawa Timur
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- 6. MODALS (TECHNICAL SPECIFICATIONS & BLUEPRINT) -->
+    <!-- ============================================== -->
+
+    <!-- Modal Universal Certificate Viewer -->
+    <div id="modal-cert" class="spec-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="obsidian-card w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 sm:p-7 space-y-4 bg-[#0e0e12] border-white/20">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div>
+                    <span id="cert-modal-tag" class="font-mono text-[10px] text-emerald-400 uppercase tracking-widest">KREDENSIAL TERVERIFIKASI</span>
+                    <h3 id="cert-modal-title" class="text-base sm:text-lg font-bold text-white mt-0.5">Sertifikat</h3>
+                    <span id="cert-modal-issuer" class="font-mono text-[11px] text-neutral-400 block">Penerbit</span>
+                </div>
+                <button onclick="closeModal('modal-cert')" class="p-2 text-neutral-400 hover:text-white">✕</button>
+            </div>
+
+            <!-- Certificate Image Display -->
+            <div class="w-full rounded-xl overflow-hidden border border-white/10 bg-black flex items-center justify-center relative min-h-[300px]">
+                <img id="cert-modal-img" src="" alt="Pratinjau Sertifikat" class="w-full h-auto max-h-[55vh] object-contain">
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10 space-y-1 text-xs font-mono text-neutral-300">
+                <div class="flex items-center justify-between text-[11px]">
+                    <span class="text-neutral-400">Nomor Registrasi / Kredensial:</span>
+                    <span id="cert-modal-reg" class="text-emerald-400 font-bold font-mono"></span>
+                </div>
+                <p id="cert-modal-desc" class="text-neutral-300 text-xs pt-1 leading-relaxed"></p>
+            </div>
+
+            <div class="pt-2 border-t border-white/10 flex justify-end gap-3">
+                <a id="cert-modal-viewlink" href="" target="_blank" class="btn-pill-white text-xs font-mono">Buka Dokumen Asli ↗</a>
+                <button onclick="closeModal('modal-cert')" class="btn-pill-dark text-xs font-mono">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal P1: Robot Kiper Spec & Custom PCB -->
+    <div id="modal-p1" class="spec-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="obsidian-card w-full max-w-2xl max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-5 bg-[#0e0e12] border-white/20">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div>
+                    <span class="font-mono text-[10px] text-neutral-400 uppercase tracking-widest">SPESIFIKASI TEKNIS &amp; HARDWARE PCB</span>
+                    <h3 class="text-lg font-bold text-white mt-0.5">Robot Pelatih Kiper Skala Penuh</h3>
+                </div>
+                <button onclick="closeModal('modal-p1')" class="p-2 text-neutral-400 hover:text-white">✕</button>
+            </div>
+
+            <!-- Integrated Hardware Visuals (Robot CAD + Custom Controller PCB) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-xl overflow-hidden border border-white/10 bg-black aspect-video relative group">
+                    <img src="assets/images/tri_spinner_cad_2d.jpg" alt="CAD 2D Robot Kiper" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-2 text-[10px] font-mono text-neutral-300">
+                        CAD 2D Pelontar &amp; Swerve Drive
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden border border-white/10 bg-black aspect-video relative group">
+                    <img src="assets/images/custom_pcb_3d.png" alt="Custom KiCad Controller PCB 3D" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-2 text-[10px] font-mono text-emerald-400 flex items-center justify-between">
+                        <span>Custom KiCad Controller PCB</span>
+                        <span>2-Layer FR4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs font-mono text-neutral-300">
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">🎯 Karakteristik &amp; Skala Purwarupa:</span>
+                    <span>Purwarupa fisik robot skala penuh (1:1), perancangan rangka baja struktural modular, integrasi mekanisme pelontar tri-spinner bola standar ukuran 5, modul kemudi swerve drive aktif, dan kompartemen elektronika terintegrasi.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-emerald-500/30 bg-emerald-950/20">
+                    <span class="text-emerald-300 font-bold block mb-1">⚡ Custom Controller PCB &amp; Hardware Embedded (KiCad EDA):</span>
+                    <span>Perancangan PCB kustom 2-layer FR4 yang terintegrasi langsung pada sasis robot pelatih kiper: menghubungkan dual-ESP32 (Master &amp; Shooter), isolasi optocoupler (PC817) untuk eliminasi derau induktif motor pada limit switch dan pulse stepper, driver BTS7960 43A MOSFET (20 kHz PWM), proteksi daya MCB 24V DC, regulator buck step-down, serta verifikasi osiloskop digital.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">⚙️ Parameter Tri-Spinner (Efek Magnus):</span>
+                    <span>3x Roller Hard PU, 3x motor DC RS-895 (3.400 RPM), driver BTS7960 43A, interupsi enkoder 4 PPR closed-loop PID velocity control menghasilkan tembakan akurasi 83,3% pada jarak 16–20 meter.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">🛞 Lokomosi Swerve Drive:</span>
+                    <span>Sepasang roda pneumatik depan + modul kemudi swerve aktif belakang (-90&deg; s/d +90&deg;). Sensor MPU6050 IMU untuk koreksi orientasi real-time.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">📡 Arsitektur Dual-ESP32 via UART 115.200 bps:</span>
+                    <span>ESP32 Master (Web Server AP 192.168.4.1 / Swerve) terhubung ke ESP32 Shooter (PWM 20kHz / Pitch-Yaw) via bus UART dua arah dengan watchdog timer 3 detik dan antarmuka HMI telemetri Flutter.</span>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 flex flex-wrap justify-end gap-3">
+                <a href="https://github.com/Akbardarma/robot-pelatih-kiper" target="_blank" rel="noopener noreferrer" class="btn-pill-dark text-xs font-mono">
+                    <span>Repositori Hardware &amp; Firmware ↗</span>
+                </a>
+                <a href="https://akbardarma.github.io/robot-pelatih-kiper/" target="_blank" class="btn-pill-white text-xs font-mono">
+                    <span>Buka Web Showcase ↗</span>
+                </a>
+                <button onclick="closeModal('modal-p1')" class="btn-pill-dark text-xs font-mono">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal P2: BNI BMS Panel & I/O -->
+    <div id="modal-p2" class="spec-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="obsidian-card w-full max-w-2xl max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-5 bg-[#0e0e12] border-white/20">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div>
+                    <span class="font-mono text-[10px] text-neutral-400 uppercase tracking-widest">LAPORAN COMMISSIONING &amp; SCADA</span>
+                    <h3 class="text-lg font-bold text-white mt-0.5">Menara BNI PIK2 — Kembaran Digital Smart BMS</h3>
+                </div>
+                <button onclick="closeModal('modal-p2')" class="p-2 text-neutral-400 hover:text-white">✕</button>
+            </div>
+
+            <!-- Integrated Commissioning Visuals (On-Site Team & SCADA Digital Twin) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-xl overflow-hidden border border-white/10 bg-black aspect-video relative group">
+                    <img src="assets/images/bni_commissioning_team.jpg" alt="Tim Commissioning Lapangan Menara BNI PIK2" class="w-full h-full object-cover" style="object-position: center 25%;">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-2 text-[10px] font-mono text-neutral-300">
+                        Berita Acara Tes Kontinuitas Lapangan BNI
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden border border-white/10 bg-black aspect-video relative group">
+                    <img src="assets/images/bni_digital_twin_preview.png" alt="Digital Twin SCADA Menara BNI PIK2" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-2 text-[10px] font-mono text-blue-400 flex items-center justify-between">
+                        <span>Digital Twin SCADA EBO</span>
+                        <span>Menara BNI PIK2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs font-mono text-neutral-300">
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">🏢 Gambaran Proyek Lapangan:</span>
+                    <span>Gedung Menara BNI PIK2, Tangerang. Magang PT Pratama Motivasi Mandiri (Jan–Jul 2025). Mengintegrasikan sensor energi panel dan sistem AHU ke Schneider EBO.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">⚡ Telemetri Gardu Hubung:</span>
+                    <span>Monitoring tegangan 3-fasa, arus, kW, kWh pada panel SDP, PAC, dan PL.</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+                    <span class="text-white font-bold block mb-1">❄️ Kontrol Loop Tertutup AHU:</span>
+                    <span>Inverter Altivar VSD (0-50 Hz), katup air dingin chilled water (0-100%), interlock Flow Switch (FS-01), dan filter kotor (DP-01).</span>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 flex justify-end gap-3">
+                <a href="https://akbardarma.github.io/bni-ibms-akbar/" target="_blank" class="btn-pill-white text-xs font-mono">Buka Demo SCADA ↗</a>
+                <button onclick="closeModal('modal-p2')" class="btn-pill-dark text-xs font-mono">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal P3: CNC 26 Blueprints Gallery -->
+    <div id="modal-p3" class="spec-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+        <div class="obsidian-card w-full max-w-3xl max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-5 bg-[#0e0e12] border-white/20">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <div>
+                    <span class="font-mono text-[10px] text-neutral-400 uppercase tracking-widest">GAMBAR KERJA MANUFAKTUR ISO</span>
+                    <h3 class="text-lg font-bold text-white mt-0.5">Desktop CNC Router 3-Axis — 26 Lembar Gambar Kerja ISO</h3>
+                </div>
+                <button onclick="closeModal('modal-p3')" class="p-2 text-neutral-400 hover:text-white">✕</button>
+            </div>
+
+            <div class="space-y-3 text-xs font-mono text-neutral-300">
+                <div class="w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-black flex items-center justify-center">
+                    <img src="assets/images/cnc_sheet_01.png" alt="Pratinjau Gambar Kerja CNC" class="w-full h-full object-contain">
+                </div>
+                <p class="text-neutral-400 text-xs">
+                    Set lengkap 26 lembar gambar kerja manufaktur berstandar ISO PENS (proyeksi ortogonal, penampang potong, toleransi H7, Bill of Materials 41 item, dan SOP perakitan mekanis).
+                </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/10 flex justify-end gap-3">
+                <a href="https://akbardarma.github.io/cnc-router/" target="_blank" class="btn-pill-white text-xs font-mono">Inspeksi Model 3D CAD ↗</a>
+                <button onclick="closeModal('modal-p3')" class="btn-pill-dark text-xs font-mono">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Toast Notification -->
+    <div id="copy-toast" class="fixed bottom-6 right-6 bg-white text-black font-mono font-semibold text-xs px-5 py-3 rounded-full shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 border border-neutral-300 flex items-center gap-2">
+        <span class="text-emerald-600 font-bold">✓</span>
+        <span id="toast-text">Berhasil disalin ke papan klip!</span>
+    </div>
+
+    <!-- Application Controller Script -->
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

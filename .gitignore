@@ -1,0 +1,5 @@
+# Local scripts & temp
+start_portfolio.bat
+*.tmp
+.DS_Store
+Thumbs.db
